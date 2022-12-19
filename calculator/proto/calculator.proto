@@ -6,8 +6,10 @@ option go_package = "github.com/Clement-Jean/grpc-go-course/calculator/proto";
 
 import "sum.proto";
 import "primes.proto";
+import "average.proto";
 
 service CalculatorService {
 	rpc Sum(CalculateRequest) returns (CalculateResponse);
 	rpc Primes(PrimeRequest) returns (stream PrimeResponse);
+	rpc Average(stream AverageRequest) returns (AverageResponse);
 };
